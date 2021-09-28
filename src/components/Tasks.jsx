@@ -6,7 +6,11 @@ const Tasks = ({ tasks, handleTaskClick, handleTaskDeletion }) => {
     return (
         <React.Fragment>
             {tasks.map((task) => (
-                <Task task={task} handleTaskClick={handleTaskClick} handleTaskDeletion={handleTaskDeletion}/>
+                <Task 
+                key={task.id}
+                task={task} 
+                handleTaskClick={handleTaskClick} 
+                handleTaskDeletion={handleTaskDeletion}/>
             ))}
         </React.Fragment>
     )
